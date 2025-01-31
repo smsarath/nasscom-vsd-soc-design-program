@@ -35,7 +35,31 @@ he input and output ports are placed left and right between the core and the die
 The placements of the ports is cell-specific. The clocks are continuously drive the cells and hence clock ports are bigger than data ports. 
 Due to this, we also need the least resistance paths for the clocks. The size is inversely proportional to the resistance.
 
+Netlist Binding and Initial Place Design
+		The step one is to bind the netlist with physical cells i.e. cells with real dimension. 
+		The second step is PLACEMENT, which is done based on connectivity.
+Optimise Placement Using Estimated Wire-Length and Capacitance
+Final Placement Optimization
+Congestion Aware Placement Using RePLACE
+	The command to run placement of OpenLANE - run_placement is a wrapper which does three functions
+	Global Placement - there is no legalisation and HPWL reduction model is used Optimization
+	Detailed Placement  - legalisation occurs - where standard cells are placed in rows and there will be no overlap of the cells.
 
+Cell Design and Characterisation Flows
 
+Inputs for Cell Design Flow and Circuit and Layout Design 
+	Standard cells - for example AND gate, OR gate, BUFFER etc are stored in the standard cell library.
+	There are various types of cells in the library with various variations as well - in drive strengths, functionality, and voltages. 
 
+Typical Characterisation Flow
+Steps of Characterisation Flow:-
+
+Reading of SPICE module files
+Reading of netlist extracted by SPICE
+Recognising buffer behaviour
+Reading subcircuits
+Attaching neccessary power sources
+Applying stimulus
+Provision of of neccessary output capacitance
+Provision of simulation command
 
