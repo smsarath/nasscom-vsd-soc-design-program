@@ -34,3 +34,8 @@ Pin Placement and Logical Cell Placement Blockage
 he input and output ports are placed left and right between the core and the die respectively. 
 The placements of the ports is cell-specific. The clocks are continuously drive the cells and hence clock ports are bigger than data ports. 
 Due to this, we also need the least resistance paths for the clocks. The size is inversely proportional to the resistance.
+
+
+
+
+
