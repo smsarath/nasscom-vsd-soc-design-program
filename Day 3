@@ -1,0 +1,15 @@
+Design Library Cell Using Magic Layout and NGSPICE characterisation
+
+Labs for CMOS Inverter NGSPICE Simulations
+IO Placer Revision
+      OpenLANE configurations can be changed inside the shell itself, on the fly. IO Mode is usually set to random equidistant. 
+SPICE Deck Creation For CMOS Inverter
+SPICE Simulation Lab for CMOS Inverter
+      The start of SPICE simulation is .op where in Vin will be swept from 0 to 2.5 with 0.05V steps. 
+  For SPICE simulation, there are various steps-:
+          Open the NGSPICE simulator
+          Source the Circuit File through source command
+          Execute it by the command run and then use setplot which allows one to view any plots possible from the simulations specified in the spice deck and will give you a choice for which simulation to be run
+          Then, type display which will give you a choice of nodes to be plotted which when plot out vs in is typed will be plotted on a graph.
+
+Static and Dynamic Simulation of CMOS Inverter
