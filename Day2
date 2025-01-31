@@ -1,0 +1,36 @@
+Chip Floor Planning Considerations
+
+Utilisation Factor and Aspect Ratio
+
+The first step in physical design is to define the width and height of the core and die.
+Beginning with a very simple netlist, that can extrapolated later we will first draw a basic diagram in the form of symbols that we will later convert into physical designs. 
+
+Utilisation factor = Area occupied by netlist / Total area of core
+
+Utilisation factor = 50 %
+
+Aspect Ratio = 2 : 4 = 1 : 2 = .5
+
+Concept of Pre-Placed Cells
+
+Pre-Placed cells are complex logic blocks that can be reused. 
+They are already implemented and cannot be touched by Auto Place and Route tools - and hence are required to be very well designed. 
+Placement of such cells are user-based. 
+
+De-Coupling Capacitors
+
+We surround pre-placed cells with de-coupling capacitors. 
+If we think of a circuit to be part of a block, whenever it is switched on there is a demand for current, which is supplied by the Vdd. 
+Upon switching the circuit off, there is a discharge, which the ground accepts. 
+
+Power Planning
+Consider a particular piece of logic to be a macro, that is repeated many times on a single chip.
+It requires a lot of voltage, so voltage must be supplied through a decoupling capacitor. 
+
+A lot of capacitors discharging at once cam cause Ground Bounce due to great amount of voltage needed to drained at the same time.
+Turning the capacitor on might cause Voltage Drop due to insufficient current.
+
+Pin Placement and Logical Cell Placement Blockage
+he input and output ports are placed left and right between the core and the die respectively. 
+The placements of the ports is cell-specific. The clocks are continuously drive the cells and hence clock ports are bigger than data ports. 
+Due to this, we also need the least resistance paths for the clocks. The size is inversely proportional to the resistance.
