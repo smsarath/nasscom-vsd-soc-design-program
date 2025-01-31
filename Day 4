@@ -6,3 +6,10 @@ Lab Steps To Convert Grid Information Into Track Information
     The input and output ports must lie at the intersection of the horizontal and vertical tracks
     The width and height of the standard cell must be odd multiples of the track's horizontal and vertical pitch respectively
 
+Delay Tables
+            The above image depicts to us how the enable pin affects the CLK propogation. 
+            In case of AND gate, ONLY when the enable pin is equal to 1, the CLK propogates to Y. 
+            Similarly, in case of OR gate, the CLK propogates to Y only when the enable pin is 0. 
+            Whenever the enable pin is equal to 1, the CLK does not propogate and there is no short circuit power consumption. 
+            Switching power consumption when such elemements are used is used in CLOCK TREE. This method is known as Clock Gating Technique.
+We notice at level 2 that both buffers have identical delays due to equal transition times, load capacitances and buffers sizes. 
