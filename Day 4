@@ -1,0 +1,8 @@
+Pre-Layout Timing Analysis and Importance of Good Clock Tree
+
+Timing Modelling Using Delay Tables
+
+Lab Steps To Convert Grid Information Into Track Information
+    The input and output ports must lie at the intersection of the horizontal and vertical tracks
+    The width and height of the standard cell must be odd multiples of the track's horizontal and vertical pitch respectively
+
