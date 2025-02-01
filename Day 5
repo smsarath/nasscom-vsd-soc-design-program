@@ -1,0 +1,5 @@
+RTL2GDS Using TritonRoute and OpenSTA
+Routing and Design Check
+
+Introduction to Maze Routing and Lee's Algorithm
+There have been many routing algorithms created like Steiner Tree algorithm, Line Search algorithm etc. and one such algorithm we will go into detail is Maze Routing 
