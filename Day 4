@@ -12,4 +12,46 @@ Delay Tables
             Similarly, in case of OR gate, the CLK propogates to Y only when the enable pin is 0. 
             Whenever the enable pin is equal to 1, the CLK does not propogate and there is no short circuit power consumption. 
             Switching power consumption when such elemements are used is used in CLOCK TREE. This method is known as Clock Gating Technique.
-We notice at level 2 that both buffers have identical delays due to equal transition times, load capacitances and buffers sizes. 
+We seen at level 2 that both buffers have identical delays due to equal transition times, load capacitances and buffers sizes. 
+
+Timing Analysis With Ideal Clocks Using Open STA
+    Setup Timing Analysis And Introduction to Flip-Flop Setup Time
+        The setup timing analysis equation is = Θ < T - S
+
+Introduction to Clock Jitter and Uncertainty
+    CLK signals are sent to the device by the PLL (Phase Locked Loop). This clock source is expected to send clock signal at 0, T, 2T etc. 
+     Realistic equation for setup time is = Θ < T - S - SU
+
+Lab Steps to Configure OpenSTA for Post-Synth Timings Analysis
+    single corner - which only uses the LIB_TYPICAL library which is the one used in pre-layout(pos-synthesis) STA
+    multi corner - multicorner which uses LIB_SLOWEST(setup analysis, high temp low voltage),LIB_FASTEST(hold analysis, low temp high voltage), and LIB_TYPICAL libraries
+
+Lab Steps to Optimize Synthesis to Reduce Setup Violations
+    For reducing the negative slack obtained, we must focus on the large delays and try to reduce them. 
+    Increases in delays are majorly caused by nets with big fanouts, which result in high load cap which causes high delay.
+
+Clock Tree Synthesis TritonCTS and Signal Integrity
+Clock Tree Routing and Buffering Using H-Tree Algorithm
+    The CLK skew is essentially the difference in propogation delay of the CLK signal as it moves along various paths. 
+        differences in wire lengths
+        variations in signal routing paths
+        variations in buffer delays
+        other physical and environmental factors
+
+Crosswalk and Clock Net Shielding
+        Clock nets are critical nets in the design because clock tree is built is such a fashion that the skew is zero. 
+
+Timing Analysis With Real Clocks Using Open STA
+        combinational delay
+        clock buffer delays
+        hold time.
+
+Lab Steps to Excecute OpenSTA With Right Timing Libraries and CTS Assignment
+    Enter into OpenROAD using the openroad command.
+    create the db file 
+    read the def file from the CTS stage
+    create the db through  write_db
+    read the db, verilog files, library and sdc
+    set the propogated clock 
+    Check the timing
+    
