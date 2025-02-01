@@ -3,3 +3,56 @@ Routing and Design Check
 
 Introduction to Maze Routing and Lee's Algorithm
 There have been many routing algorithms created like Steiner Tree algorithm, Line Search algorithm etc. and one such algorithm we will go into detail is Maze Routing 
+Intialization
+  * obstacle 
+  * empty 
+  * visited 
+  * source 
+  * target
+Wave Expansion
+Backtracking and Path Reconstruction 
+
+Design Rule Check
+    When we route, we do not just merely connect two points, we must also adhere to certain rules. 
+
+Power Distribution Network and Routing
+Lab Steps
+Go to the openlane directory
+Enter the command docker and then ./flow.tcl -interactive
+Enter package require openlane 0.9.
+Enter prep -design picorv32a -tag
+Then type echo $::env /openLANE_flow/designs/picorv32a/runs/results/cts/picorv32a.cts.def
+To generate the PDN
+
+
+Basics of Global and Detail Routing and Configure TritonRoute
+  TritonRoute is the engine that is used for routing through the run_routing command.
+
+Global Route
+Fast Route
+
+TritonRoute Features
+      It perform inital detail route
+      Honours the preprocessed route guides
+      Satify inter guide connectivity
+
+It should be unit width
+It should be preferred direction
+
+Intial guides
+Splitting
+Merging
+Bridging
+Preprocessed guides
+
+TritonRoute Method
+Inputs
+Outputs
+Constraints
+
+Access Point
+Access point Cluster
+
+Routing Toplogy Algorithm
+Optimization Routing Toplogy
+
